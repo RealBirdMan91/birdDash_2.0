@@ -23,7 +23,7 @@ export default async function RootLayout({
       <html lang="en">
         <body
           className={cn(
-            "bg-background text-white h-screen flex flex-col foucus:placeholder-red-500",
+            " h-screen flex flex-col foucus:placeholder-red-500",
             inter.className
           )}
         >

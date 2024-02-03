@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <main className="h-full flex flex-col items-center justify-center p-4">
-      <Card className="bg-foreground p-2 max-w-4xl w-full  grid md:grid-cols-2 md:gap-6 border-none">
+    <main className="bg-[#1a1c1e] h-full flex flex-col items-center justify-center p-4">
+      <Card className="bg-[#25282c] p-2 max-w-4xl w-full  grid md:grid-cols-2 md:gap-6 border-none">
         <div className="flex flex-col justify-between">
           <CardHeader>
             <h1 className="text-3xl font-bold mb-4 text-white">
