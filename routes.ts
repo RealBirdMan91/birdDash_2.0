@@ -1,4 +1,4 @@
-export const publicRoutes: Array<string> = [];
+export const publicRoutes: Array<string> = ["/auth/verify-request"];
 
 export const authRoutes = ["/"];
 

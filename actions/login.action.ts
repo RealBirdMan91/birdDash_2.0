@@ -5,6 +5,8 @@ import { ActionResponseType } from "@/types/response";
 import { ZodError } from "zod";
 import { signIn } from "@/auth";
 import { getUserByEmail } from "@/data/user";
+import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+import { AuthError } from "next-auth";
 
 export async function login({
   email,
@@ -26,6 +28,12 @@ export async function login({
   } catch (error) {
     if (error instanceof ZodError) {
       return { type: "error", message: error.issues[0].message };
+    }
+    if (error instanceof AuthError) {
+      return {
+        type: "error",
+        message: "An Auth Error occured, please contact your admin",
+      };
     }
     return {
       type: "error",

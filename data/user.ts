@@ -17,3 +17,16 @@ export async function getUserByEmail(email: string) {
     return null;
   }
 }
+
+export async function getUserById(id: string) {
+  try {
+    const user = await db.query.users
+      .findFirst({
+        where: eq(users.id, id),
+      })
+      .execute();
+    return user;
+  } catch (err) {
+    return null;
+  }
+}

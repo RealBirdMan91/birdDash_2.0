@@ -16,6 +16,7 @@ import { FormError } from "../FormError";
 import { FormSuccess } from "../FormSuccess";
 import { login } from "@/actions/login.action";
 import { useActionMutation } from "@/hooks/useActionMutation";
+import { BeatLoader } from "react-spinners";
 
 function LoginForm() {
   const { error, isPending, success, mutate } = useActionMutation({

@@ -4,10 +4,13 @@ import {
   text,
   primaryKey,
   integer,
+  pgEnum,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "@auth/core/adapters";
 import { drizzle } from "drizzle-orm/vercel-postgres";
 import { sql } from "@vercel/postgres";
+
+export const role = pgEnum("role", ["student", "employee", "admin"]);
 
 export const users = pgTable("user", {
   id: text("id").notNull().primaryKey(),
@@ -15,6 +18,7 @@ export const users = pgTable("user", {
   email: text("email").notNull(),
   emailVerified: timestamp("emailVerified", { mode: "date" }),
   image: text("image"),
+  role: role("role").default("student"),
 });
 
 export const accounts = pgTable(
