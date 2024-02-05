@@ -29,12 +29,11 @@ export const authConfig = {
       options: {},
       sendVerificationRequest: (params) => {
         (async function () {
-          const confirmURL = `${process.env.NEXT_URL}/auth/verify-request?token=${params.token}`;
           await resend.emails.send({
             from: process.env.EMAIL_FROM!,
             to: [params.identifier],
             subject: "Hello World",
-            html: `<a href="${confirmURL}">signin</a>`,
+            html: `<a href="${params.url}">signin</a>`,
           });
         })();
       },

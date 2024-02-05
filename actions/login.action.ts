@@ -22,6 +22,7 @@ export async function login({
     await signIn("email", {
       email,
       redirect: false,
+      redirectTo: DEFAULT_LOGIN_REDIRECT,
     });
 
     return { type: "success", message: "An email send to the user" };
