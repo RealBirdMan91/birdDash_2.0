@@ -3,7 +3,7 @@ import LoginForm from "@/components/auth/LoginForm";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 
-export default function HomePage() {
+export default function LoginPage() {
   return (
     <main className="bg-[#1a1c1e] h-full flex flex-col items-center justify-center p-4">
       <Card className="bg-[#25282c] p-2 max-w-4xl w-full  grid md:grid-cols-2 md:gap-6 border-none">

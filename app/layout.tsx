@@ -21,12 +21,7 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <body
-          className={cn(
-            " h-screen flex flex-col foucus:placeholder-red-500",
-            inter.className
-          )}
-        >
+        <body className={cn(" flex flex-col", inter.className)}>
           {children}
         </body>
       </html>
